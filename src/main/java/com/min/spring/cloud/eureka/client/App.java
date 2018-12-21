@@ -24,8 +24,6 @@ public class App {
     @Autowired
     DiscoveryClient discoveryClient;
     @Autowired
-    LoadBalancerClient loadBalancerClient;
-    @Autowired
     RestTemplate restTemplate;
 
 
@@ -38,9 +36,7 @@ public class App {
 
     @GetMapping("test")
     public String test() {
-        final ServiceInstance service1 = loadBalancerClient.choose("服务1");
-        final String url = "http://" + service1.getHost() + ":" + service1.getPort() + "/test";
-        return restTemplate.getForObject(url, String.class);
+        return restTemplate.getForObject("http://服务1/test", String.class);
     }
 
 
