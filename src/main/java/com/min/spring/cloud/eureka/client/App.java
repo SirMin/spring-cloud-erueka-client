@@ -36,7 +36,7 @@ public class App {
 
     @GetMapping("test")
     public String test() {
-        return restTemplate.getForObject("http://服务1/test", String.class);
+        return restTemplate.getForObject("http://service1/test", String.class);
     }
 
 

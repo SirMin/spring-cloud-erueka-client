@@ -6,7 +6,11 @@ spring:
       host: localhost
       port: 8500
   application:
-    name: 中文服务
+    name: service
+service1:
+  ribbon:
+    eureka:
+      enabled: false
 #eureka:
 #  client:
 #    serviceUrl:
