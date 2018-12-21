@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>groupId</groupId>
-    <artifactId>spring-cloud-eureka-client</artifactId>
+    <artifactId>spring-cloud-service</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -29,14 +29,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-netflix-eureka-server</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-consul-discovery</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
@@ -69,7 +69,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>spring-cloud-eureka-client</finalName>
+        <finalName>spring-cloud-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
