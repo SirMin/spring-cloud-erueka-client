@@ -28,6 +28,11 @@ public class App {
         return services;
     }
 
+    @GetMapping("test")
+    public String test() {
+        return "";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
     }
