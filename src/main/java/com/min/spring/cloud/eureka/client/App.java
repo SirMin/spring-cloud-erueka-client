@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.consul.ConditionalOnConsulEnabled;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
  * TODO 功能描述
  */
 @SpringBootApplication
-@EnableEurekaClient
 @RestController
 @EnableDiscoveryClient
 public class App {
